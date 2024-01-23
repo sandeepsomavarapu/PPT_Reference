@@ -1,0 +1,43 @@
+this,super,final
+
+
+
+final keyword
+
+3 levels
+
+1)final at Variable
+
+2)at class
+
+3)at method
+
+
+
+	class A
+	{
+	int a=100;
+	
+	int f;
+	void m1()
+	{
+	Syso("aja")
+	}
+	}
+	class B extends A
+	{
+	int a=20
+	void m1()
+	{
+	Syso("java")
+	}
+	B b=new B();
+	this.m1();
+	}
+	
+	
+	this is used for representing current class properties(var,obj,method,const)
+	super is used for representing parent class properties(var,obj,method,const)
+	
+
+

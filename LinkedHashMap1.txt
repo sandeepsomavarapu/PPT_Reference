@@ -1,0 +1,162 @@
+LinkedHashMap:
+--------------
+
+Linked Hash map it is the child class of hashmap
+
+it is exactly same as hashmap including methods and constructors except the following differences
+
+
+1)hashmap     		2) linkedHashMap
+
+1)The underlying datastrucure 1) underlaying d.s is LL+Hashtable
+
+2)Insertion order is not preserved and it is based hash code of keys 2) Insertion order is preserved
+
+3)it is introduces  in 1.2v 3) introduced in 1.4 v
+
+
+Difference between == and .equal()
+----------------------------------
+
+In general == operator ment for reference comparison(address comparison) where as .equal meant for content comparison
+
+
+Integer i1 = new Integer(10);
+Integer i2 = new Integer(10);
+
+sop(i1=i2);-false
+
+i1.equals(i2)-true
+
+
+
+IdentityHashMap:
+----------------
+
+It is exactly same as hashmap including methods and constructors except the following difference
+
+in the case of normal hashmap jvm will use .equals to compare
+or to identify duplicate keys,which is meant for content comparison
+
+but in the case of Identityhashmap jvm will use == operator
+to identify the duplicate keys,which is meant for reference comparison(address comparison)
+
+HashMap m = new Hashmap();
+
+Integer i1 = new Integer(10);
+Integer i2= new Integer(10);
+
+m.put(i1,"pawan");
+m.put(i2,"kalyan");
+
+s.o.p(m) --{10=kalyan} i1 and i2 are duplicate keys because i1.equals(i2) --returns -true
+
+if we replace HashMap with identityHashMap then i1 and i2 are not duplicate keys because i1==i2 return false
+
+In this case output is {10=pawam,10=kalyan}
+
+
+WeakHashmap:
+------------
+
+
+
+
+
+
+equals in Object class:
+-----------------------
+
+
+
+	.equals-->it will check the references
+	
+	
+	A a=new A();//heap-->@qweuyw
+	
+	A a1=new A();
+	
+	sop(a.equals(a1));false
+	
+	
+	
+
+String s="ibm";
+
+String s1="ibm";
+
+
+sop(s.equals(s1));//true
+
+//it will check values
+
+
+
+sop(s==s1);//it will check the references //true
+
+
+
+
+ 
+ hashmap->duplicates are not allowed,insertion order is not preserved
+ 
+		(key,value)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ String:
+ ----------
+ 
+ java.lang
+ 
+ 
+ literal
+ -------
+ String a="xyz";-->scp
+ 
+ new
+ 
+ 
+ String s=new String("ibm");
+ 
+ 
+ 
+ heap-->scp
+ 
+ 
+ 
+ 
+ 
+  String a="xyz";  
+   String a1="xyz";
+ 
+ 
+ sop(a.equals(a1));//true
+ 
+ sop(a==a1);//true
+ 
+ 
+ 
+ 
+ scp-any duplicate object ->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+

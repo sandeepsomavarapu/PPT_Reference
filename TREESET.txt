@@ -1,0 +1,149 @@
+TREESET
+-------
+
+The underlaying data strucure is BALANCED Tree 
+
+Duplicate Objects are not allowed
+
+Insertion order is not preserved
+
+Heterogeneous objects are not allowed,other wise we will get runtime exception saying class cast exeception
+
+Null insertion is possible (only once)
+
+
+
+TreeSet implements serializable,cloneable butnot randomaccess
+
+All objects are inserted based on some sorting order
+
+constructors:
+-------------
+
+1) TreeSet ts = new TreeSet()---where the elements will inserted according to Default-natural-sorting order
+
+2)TreeSet ts = new TreeSet(Comparator c);----customized sorting ordercreates an empty treeset object where the elements will inserted to customized sorting order specified by comparator object.
+
+3)TreeSet c = new TreeSet(collection c);
+
+4)TreeSet ts = new TreeSet(SortedSet s);
+
+
+
+null acceptance:
+----------------
+
+1)t.add(null)
+
+1)for non-empty treeset if we are trying to insert  null then we will get null-pointer exception
+
+2)for empty treeset as  the first element  null is allowed  but after inserting that null ,if we trying to insert any other element we will get run-time exception null-pointer exception 
+
+note:
+-----
+untill 1.6 version null is allowed as a first element to empty treeset .
+
+from 1.7 version null is not allowed even as the first element (null-such  not applicable for treeset form 1.7)
+
+ex:2
+-----
+3) where we use predefined class object in treeset the class should be insert homogeneous object and should implement comparable interface
+
+ex: using new StringBuffer("A") -- RE -CLASS CAST Exception
+
+note:
+-----
+All wrapper class are comparable (Integer,Long,Double)
+
+String class and all wrapper classes already implement comparable interface but stringbuffer class doesnt implement comparable interface
+
+1)comparable interface (I)
+--------------------------
+it is present in java.lang package and it contains only one method - 
+
+publi int compareTo(Object obj)
+
+obj1.compareTo(ob2)
+
+--return -ve if obj1 has to come before obj2
+--return +ve if obj1 has to come after obj2
+-- return 0 if obj1 & obj2 are equal.
+
+ex:-3
+
+psvm{
+
+
+sop("A".compareTo("Z"));
+sop("Z".compareTo("K"));
+sop("A".compareTo("A"));
+--RE - nullpointer exception
+}
+
+note:
+=====
+if we are depending on default natural sorting order then while adding objects into the treeset jvm will call compareTo method 
+
+TreeSet t = new TreeSet();
+
+t.add("k"); 
+
+t.add("z");"z".compareTo("k") == +ve right node
+
+t.add("A");"A".compareTo("K") == -ve left node
+
+t.add("A");"A".compareTo("K") == -ve		K
+
+           "A".compareTo("A") == -ve --0   A	    Z
+
+Note:
+-----
+if default natural sorting order is not available or if we are not satified natural sorting order then we can customized sorting by using comparator 
+
+
+Comparable meant for default natural sorting order where as comparator meant for customized sorting order.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

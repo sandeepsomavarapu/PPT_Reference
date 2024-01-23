@@ -1,0 +1,143 @@
+OOPS:-
+==============                                         
+*the programing methodology where everything represented as an object is known as truly oops.(smaltalk)
+*oops is methodology to design a program using classes and objects.
+(class, object ,inheritance)
+
+
+OOPL:-
+------
+THE LANGUAGE WHICH SUPPORTS ALL THE FEATURES OF OOPS.
+
+object:-
+
+object is a real world entity,entity that has state and behaviour.physical.
+
+class :-
+
+class is collection of METHODS,CONSTRUCTORS and data members,it is logical entity.
+
+1)ABSTRACTION                                        "    encapsulation/security 
+2)ENCAPSULATION                                   "
+3)TIGHTLY ENCAPSULTED CLASS       "
+                                                                          "
+4)is-a relation(INHERITANCE)     
+5)has-arelation
+6)method signature
+
+7)overloading                                         "
+*8)overriding                                            "                    polymorphisam
+                                                                    "
+
+CODE REUSABILITY
+
+
+
+
+
+INHERITANCE
+
+POLUMORPHISAM
+
+
+
+
+2)ABSTRATION :-		
+=============
+Hiding internal implmentation and just highlight the set  of services what we r offering is the concept of abstraction
+ex:-through bank ATM gui screen bank people are highlighting the set of services what they are offering with out hilighting internal implementation.
+ 		
+the main advantages abstraction are 
+1)we can achieve security because we are not highlighting our internal implementation. 
+2)with effecting out side person we can able to perform any type of changes in our internal system and hence enhancement will become easy
+3) it improves maintain ability of the application.
+4)it improves easyness to use our system.
+
+**By using interfaces and abstract classes we can implement abstraction .
+
+
+
+ENCAPSULATION:-
+==============
+THE PROCESS OF BINDING DATA AND  corresponding methods into a single unit is nothing but encapsulation 
+ex:
+class student
+{
+data members
+           +
+methods(behaviour)
+}
+
+***technical
+****if any component follows data hiding and abstraction such type of component is said to be encapsulated component
+encapsulation =data hiding +abstraction;
+ex:-
+
+public class account  //encapsulated class//BEAN//POJO
+{
+private double balance=1000;
+
+public double getBalance()
+{
+//validation
+return balance
+}
+public void setBalance(double balance)
+{
+//validation
+this.balance=balance;
+}
+}
+the main advantages of encapsulation are 
+1)we can achieve security
+2)enhancement will become easy
+3)it improves maintainbility of the application 
+the main aadvantage of encapsulation is we can achieve security  but the main dis-advantage of encapsulation is it increases length of the code and slows down execution .
+TIGHTLY ENCAPSULATION:-
+=========================
+a class is said to be tightly encapsulated if and only if each and every variable declared as private.
+weather class contain corresponding getter and sender meathods are not and weather these meathods are declared as public or not these things we are not required check
+Ex:-
+public class account
+{
+private double balance;
+public double getbalance()
+{
+return balance;
+}
+}
+1)which of the following classes are tightly encapsulated ?
+class a
+{
+private int x=10;
+}
+class b extends a 
+{
+float y=2.5;
+}
+class c extends a
+{
+private int z=12;
+}
+ans:class A and class c are tightly encapsulated
+
+2)which of the following classes are tightly encapsulated ?
+
+class A
+{
+int x=11;
+}
+class B extends A
+{
+private int y=21;
+}
+class C extends B
+{
+private int z=22;
+}
+ANS:-if the parent class not tightly encapsulated then no child class is tightly encapsulated.
+
+
+
+FIRST BLOCK (DATA HIDING ,ABSTRACTION,ENCAPSULATION,TIGHTLY ENCAPSULATION)ONLY FOR
+""**SECURITY**""

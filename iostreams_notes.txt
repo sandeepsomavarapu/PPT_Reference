@@ -1,0 +1,284 @@
+
+IOSTREAMS IN JAVA:
+~~~~~~~~~~~~~~~~
+Generally, in JAVA programming we write two types of applications or 
+programs. They are
+
+volatile or non-persistent program &
+non-volatile or persistent program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+• A volatile program is one whose result is always stored in main memory 
+of the computer i.e.,RAM. Whatever the data which is stored in the main 
+memory of the computer that data will be temporary i.e., the data which is 
+available in main memory is volatile.
+
+
+
+
+
+
+
+
+
+
+
+
+• A non-volatile program is one whose result is stored in secondary storage 
+devices i.e., hard disk,magnetic tapes, etc. the data which is stored in 
+secondary storage devices is permanent. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To store the data we have two approaches. They are using files and using 
+database.
+
+In order to store the data permanently in the form of files we must use or 
+import a package called java.io.*
+
+Collection of records is known as file. A record is a collection of field
+values.
+
+ A stream is a flow of data between primary memory and secondary 
+ memory either locally(within the system) or globally (across the network)
+
+
+
+
+
+
+
+
+
+
+
+
+
+Types of operations or modes on files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On files we perform two types of operations they are 
+
+               read operation 
+               write operation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Types of streams in JAVA:
+~~~~~~~~~~~~~~~~~~~~
+Based on transferring the data between primary memory to secondary 
+memory and secondary memory to primary memory. 
+In JAVA we have two types of streams they are 
+
+                  byte stream.
+                  character stream.
+
+
+
+
+
+
+
+
+
+
+
+bytestream:
+~~~~~~~~~
+Byte streams are those in which the data will be transferred one byte at a 
+time between primary memory to secondary memory and secondary 
+memory to primary memory either locally or globally. 
+
+java.io.* package contains some set of classes and interfaces which will 
+transfer one byte at a time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hierarchy of ByteStream related classes:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+InputStream is an abstract class since read() is available as an
+abstract method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+InputStream class:
+~~~~~~~~~~~~~~~
+This is an abstract class; hence we cannot create an object of this
+class directly. This class is basically used to open the file in read mode.
+
+
+1. public abstract int read ();//to read the data from the file
+2. public int length (); // total size of the file
+3. public void close ();//to close the file
+
+                            etc...
+note:
+~~~~
+In JAVA end of file (EOF) is indicated by -1
+
+
+
+
+
+
+
+OutputStream class:
+~~~~~~~~~~~~~~~~
+This is also an abstract class; hence we cannot create the object of this 
+and  this class is used for opening the file in write mode.
+
+1. public void write (int);
+2. public int length ();
+3. public void available ();
+4. public void close ();
+
+                  etc.....
+
+
+
+
+
+
+
+
+
+Write the following JAVA programs: 
+
+1) create a file that should contain 1 to 10 numbers. 
+2) read the data from the file which is created above.
+
+
+
+
+
+Serialization in java:
+~~~~~~~~~~~~~~~
+serialization is the process of writing the object data into network supported
+format(text file)
+
+By default network won't support object data that's why we have to
+convert this object data into network supported format of file, is known
+as serialization.
+
+If we want to make normal java class as a serializable class, we have
+to define the class that must be implements from Serializable interface.
+
+note:
+~~~
+Serializable is one of the marker interface which means contains nothing
+But still jvm is internally provides some features to the class which 
+implements Serializable interface
+
+
+Deserialization:
+~~~~~~~~~~~~
+In serialization process, we stored the object data into text format file, after
+that if we want to read that object data from the text format we have to apply
+the concept of deserialization.
+
+Deserializatin is the process of reading the object data from text file or
+network supported file is known as Deserialization.
+
+How to achieve Serialization & Deserialization:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To achieve these two concepts, in java we are using following pre-defined
+classes which are available in io package
+
+ObjectOutputStream is the predefined class and it contains writeObject()
+using this we can write the object data into text file
+
+ObjectInputStream is the predefined class and it contains readObject()
+using this we can read the object data from text file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

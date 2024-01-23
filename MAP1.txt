@@ -1,0 +1,205 @@
+MAp -HashMap -1.2v -extends-> -LinkedhashMap -1.4
+|
+|---> IdentityHashMap-1.4 
+|---> WeakHashMap -1.2
+|---> SortedMap(I) -1.2 -ext->NavigableMap(I)-1.6 --implements--TreeMap-1.2 
+|
+|---> Legacy classes -->Hashtable -extends->Properties --1.0 v
+|
+|
+|---> 
+
+MAP is not child interface of Collection. 
+
+If we want to represent a group of objects as key,value pairs then we should go for Map.
+
+Key	value
+
+101	raju     ---  entry
+
+102	kishore  
+
+103	sumit
+
+Both keys and values are objects only ,duplicate keys are not allowed but values can be duplicated
+
+Each key-value pair is called Entry,hence map is consider as a collection of entry objects
+
+MAP interface methods:
+----------------------
+
+1)Object  put(Object key,Object value)
+
+to add one key value pair to the map, if the key is already present then old value will replaced with new value and returns old value
+
+ex: m.put(101,"durga")   o/p durga replaced with ravi
+    m.put(102,"shiva")
+    m.put(101,"ravi")
+
+2)void putAll(map m); --Add a group of key values pairs added
+
+
+3)Object get(Object key) - Returns the value associated with specified key
+
+4)Object remove(Object key) -Removes the entry associated with specified key
+
+5)boolean containKey(object key)
+
+6)boolean containValue(Object value)
+
+7)boolean isEmpty();
+
+8)int size();
+
+9) void clear();
+
+Collection views of Map:
+------------------------
+
+Set KeySet()
+
+Set entrySet()
+
+Collection values()
+
+Entry Interface:
+----------------
+
+A MAP is a group of key value pairs and each pkey value pair is called an ENTRY.
+
+Hence Map is consider as A collection of entry objects
+
+with out existing map object their is no chance of existing entry object hence entry interface is defined inside map interface 
+
+
+interface Map{
+
+interface Entry{
+
+Object getKey();   --Entry specific methods and we can apply
+Object getValue();    only on entry object
+Object setValue(Object o)
+
+}
+
+}
+
+
+
+HASHMAP:
+--------
+
+->The underlaying datastructure is Hashtable
+-> Insertion order is not preservedand it is based on hashcode of key
+
+-->duplicate keys are not allowed but values can be duplicated
+
+-->Heterogeneous objects are allowed both key and value
+
+-->null is allowed for key (only once)
+
+-->null is allowed for values(any no.of times)
+
+-->HashMap implements serializable,cloneable interfaces but not random access
+
+-->HashMap is best choice if our frequent operation is search operation
+
+constructors:
+-------------
+
+1)HashMap m = new HashMap()
+
+creates an empty hash map object with default intial capacity 16 and default fill ration 0.75
+
+2) HashMap m = new HashMap(initalcapacity ic);
+
+creates an empty hash map object with specified initial capacity and default fill ratio 0.75
+
+3) HashMap m = new HashMap(int initalcapacity ic,float fillration);
+
+2) HashMap m = new HashMap(HashMap m);
+
+
+
+Differeces between HashMap and Hashtable:
+-----------------------------------------
+
+1) NOT SYNCHORNIZED  1) NOT SYNCHORNIZED
+
+2) NOT THREAD SAFE  2) ONLY ONE THREAD IS THREADSAFE
+
+3)RELATIVE PERFORMACE IS HIGH 3) PERFORMANCE IS LOW
+
+4)NULL IS ALLOWD FOR KEY ,VALUES 4) NOT APPLICABLE
+
+5) NOT LEGACY 1.2V 5) LEGACY 1.0V
+
+
+
+HOW TO GET SYNCHRONIZED VERSION OF HASHMAP OBJECT:
+----------------------------------------------------
+
+HashMap m = new HashMap();
+
+Map m1 = Collections.synchronizedMap(m);
+
+
+by default HashMap is non-synchronized but we can get synchronized version of HashMap by using synchronizedMap method of Collections class
+
+
+
+
+
+Hashtable:
+==========
+1)underlying datastructure is hastable.
+2)insertion order is preserved based hashcode of keys.
+3)duplicate keys are not allowed but values can be duplicate.
+4)Heterogeneous objects allowed as key and value.
+5)null is not allowed for both key and value (NullPointerException)
+6)every method present in hashtable is thread safe because of  all methods are synchronized.
+7)default 
+
+
+**for hashmap and hashset default size is 16
+
+**for  hashtable default size is 11  fil ratio is 0.75.
+
+HashMap<Integer,String> hm=new HashMap<Integer,String>();
+
+Properties p=new Properties();//<String,String>
+
+
+
+Properties:
+===========
+Properties p=new Properties()
+//here both key and value should be String type.
+
+Methods:
+========
+//to get property value by using the property name
+
+p.getProperty(String pname)// return String
+
+//to  store some value using  properties object.
+
+p.setProperty(String pname,String pval);
+
+//if we want load properties  file properties to our java file then we  need to use method load 
+
+p.load()
+
+//after loading if we want reflect the values in properties file what are the changes we made in java.
+
+p.store()
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+Comparator(Interface) present in java.util.package
+----------------------------------------
+and it defines two methods
+
+compare and equals
+
+public int compare(Object obj1,Object ob2);
+
+
+whenever we are implementing comparator interface compulsary we should provide implementation for compare method.
+
+ans we are not required to provide implementation for equals method. Because its already available from object class through inheritance
+
+
+
+
+returns - -ve iff obj1 has to come before obj2;
+
+returns - + iff obj1 has to come after obj2;
+
+returns - 0 iff obj1&obj2 are equal ;
+
+
+2) public boolean equal(object obj1);
+
+=============================================================
+when we should go for comparable v/s comparator:
+------------------------------------------------
+
+1) For predefined comparable classes default natural sorting order already available ,if we are not satisfied with that default natural sorting order then we can define our own sorting by using comparator interface.
+
+2) For predefined non-comparable classes(like..StringBuffer)
+d.N>S>O not already available, we can define our own sorting by using comparator.
+
+3) For our own class(user defined classes like: EMployee)the person who is writing the class he is responsible to define default natural sorting order by implementing comparable interface.
+
+the person who is using our class, if he is notsatisfy with D.N.S.O then he can define his own sorting using comparator.
+
+
+Comparsion of Comparable and comparator:
+========================================
+ comparable						comparator
+
+1) it is meant for default natural sorting order   1)it is meant for customized sorting order
+
+2) present in java.lang 		2) java.util.
+
+3)it defines only one method		3) it defines two methods.
+   compareTo()				    compare(),equals()
+
+4)String and all wrapper classes	4) the only implemented classes of 
+  implments comparable classes		   comparator are 					                           Collator,RuleBasedColator
+
+
+
+comparison table of set implemented classes:
+=============================================
+
+properties	HashSet		LinkedHashSet		TreeSet
+----------	-------		-------------		--------
+
+underlying-	Hashtable	Llist+Hashtable		BalancedTree
+D.Structure
+
+Duplicates-	NotAllowed	NotAllowed		NotAllowed
+Object 
+
+Insertion-	NotPreserved	Preserved		NotPreserved
+Order
+
+Sorting-	N.A		N.A			Applicable
+order
+
+Heterogeneous   Allowed		Allowed			Not Allowed
+-objects
+
+Null-Acceptance Allowed		Allowed			For a empty
+							Treeset as first elem 
+							is allowed 
+							
+							
+							
+							

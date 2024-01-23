@@ -1,0 +1,64 @@
+polymorphisam:
+==============
+one thing in different ways.
+one task in diff ways.
+poly means many.
+morphisam means forms.
+
+Ex:one person have different behaviours.
+
+polymorphisam's two types
+
+1)compile time polumorphisam // static binding //  early binding.
+
+**we can achieve compile time polumorphisam using overloading concept it may be method or constructor.
+	1)method overloading.//method name is signature is different
+	2)constructor overloading.// ''     ''   ''   ''
+	3)operater overloading.//one operater with more than one behaviour ex:   '+' operater
+example for compile time polumorphisam method overloading because it binds mapping's at compile time.
+2)runtime polymorphisam // dynamic binding // lazy binding
+
+**we can achieve run time polymorphisam using overriding.
+
+
+
+OVERRIDING:
+===========
+
+**8 rules for over riding
+
+1)while overriding the parent class method signature and child cllass method signature should be same.
+
+2)while overriding overriided method and overridden method must be same.****@ premitive level must be same @ class  level may be different.
+
+3)@class level we can change the return type  of overriding metthod.
+1.5 version covariennt return type
+
+4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+generally 14 dafault packages in java.\
+in that default package is java.lang 
+
+JAVA CLASSES  
+=============
+4240 in java 8
+4024 in java 7
+3793 in java 6
+3279 in java 5.0
+2723 in java 1.4.2*
+1840 in java 1.3.1*
+
+
